@@ -5,7 +5,9 @@ const DoctorCard = props => (
 
     <div className = "card">
     <div className="img-container">
-    <img alt="true" src={props.image}/>
+    <img alt="true" src={props.image}
+   
+    />
     </div>
 
     </div>

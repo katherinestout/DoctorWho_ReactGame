@@ -11,9 +11,11 @@ class Doctors extends Component {
     }
 
     handleClick= () => {
-        console.log('clicked!');
+        console.log(this);
     }
-//console.log the index value
+    
+//console.log(this.state.DoctorList[1].name);
+
   render() {
 
  
@@ -23,15 +25,13 @@ class Doctors extends Component {
           <div className="wrapping">
         {this.state.DoctorList.map(DoctorList => (
 
-            <div className="eachdoctor" onClick = {this.handleClick} 
+            <div className="eachdoctor" 
+            onClick = {this.handleClick} 
             key={DoctorList.name}> 
 
                 <DoctorCard
                 name key = {DoctorList.name}
                 image = {DoctorList.image}
-            
-
-                
                 />
                 
             </div>
