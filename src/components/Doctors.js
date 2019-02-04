@@ -10,20 +10,32 @@ class Doctors extends Component {
         DoctorList
     }
 
+    handleClick= () => {
+        console.log('clicked!');
+    }
+//console.log the index value
   render() {
 
+ 
 
     return (
       <div>
           <div className="wrapping">
         {this.state.DoctorList.map(DoctorList => (
-            <div> 
+
+            <div className="eachdoctor" onClick = {this.handleClick} 
+            key={DoctorList.name}> 
 
                 <DoctorCard
                 name key = {DoctorList.name}
                 image = {DoctorList.image}
+            
+
+                
                 />
+                
             </div>
+         
         ))}
    </div>
       </div>

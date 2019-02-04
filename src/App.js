@@ -9,8 +9,11 @@ class App extends Component {
       <h1>Doctor Who Memory Game</h1>
       <h2><i>How good is your memory?</i></h2>
       <p>Click on a Doctor! When the board shuffles, 
-        click on a different doctor. Keep clicking different doctors
-        to see how good your memory is. If you click on all the doctors,
+        click on a different doctor. 
+        
+        <br></br>Keep clicking different doctors
+        to see how good your memory is. 
+        <br></br>If you click on all the doctors,
         you win. If you click on one twice, you lose!
       </p>
 <Doctors/>
