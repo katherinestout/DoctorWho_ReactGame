@@ -1,5 +1,6 @@
 [{"name": "one",
     "image": "images/one.JPG"},
+
 {"name": "two",
     "image": "images/two.JPG"},
 
@@ -7,5 +8,29 @@
     "image": "images/three.JPG"},
 
 {"name": "four",
-    "image": "images/four.JPG"}
+    "image": "images/four.JPG"},
+
+{"name": "five",
+    "image": "images/five.JPG"},
+
+{"name": "six",
+    "image": "images/six.JPG"},
+
+{"name": "seven",
+    "image": "images/seven.JPG"},
+    
+{"name": "eight",
+    "image": "images/eight.JPG"},
+    
+{"name": "nine",
+    "image": "images/nine.JPG"},
+
+{"name": "ten",
+    "image": "images/ten.JPG"},
+
+{"name": "eleven",
+    "image": "images/eleven.JPG"},
+            
+{"name": "twelve",
+        "image": "images/twelve.JPG"}
 ]
