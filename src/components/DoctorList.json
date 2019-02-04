@@ -1,36 +1,48 @@
  [{"name": "one",
+    "id": 1,
     "image": "images/one.JPG"},
 
 {"name": "two",
+    "id": 2,
     "image": "images/two.JPG"},
 
 {"name": "three",
+    "id": 3,
     "image": "images/three.JPG"},
 
 {"name": "four",
+    "id": 4,
     "image": "images/four.JPG"},
 
 {"name": "five",
+    "id": 5,
     "image": "images/five.JPG"},
 
 {"name": "six",
+    "id": 6,
     "image": "images/six.JPG"},
 
 {"name": "seven",
+    "id": 7,
     "image": "images/seven.JPG"},
     
 {"name": "eight",
+    "id": 8,
     "image": "images/eight.JPG"},
     
 {"name": "nine",
+    "id": 9,
     "image": "images/nine.JPG"},
 
 {"name": "ten",
+    "id": 10,
     "image": "images/ten.JPG"},
 
 {"name": "eleven",
+    "id": 11,
     "image": "images/eleven.JPG"},
             
 {"name": "twelve",
+    "id": 12,
         "image": "images/twelve.JPG"}
 ]
