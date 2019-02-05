@@ -12,7 +12,7 @@ class Doctors extends Component {
       //  doctors,
         clickedArray: [],
         loss: 0,
-        win: 0,
+        doctorCount: 0,
         msg: "",
         score: 0
     };
@@ -21,37 +21,47 @@ class Doctors extends Component {
   handleClick = (id) => {
     //if the array includes the id already, they add to lose
     if (this.state.clickedArray.includes(id)){
+
       this.setState({msg: "Sorry mate, you lost."});  
 
-      let lose = this.state.loss +1;
-      let win = this.state.win;
+      let loss = this.state.loss +1;
+      let doctorCount = this.state.doctorCount;
 
-      win = 0;
-      this.setState({win: win, loss: lose, clickedArray: []});
+      doctorCount = 0;
+      this.setState({doctorCount: doctorCount, 
+        loss: loss, 
+        clickedArray: []});
       this.shuffleDoctors();
     } 
     
     else {
-      let win = this.state.win +1;
-      if (win === 12){
+
+      //else add to the doctorCount
+      let doctorCount = this.state.doctorCount +1;
+      let score = this.state.score +1;
+    
+     //if the doctorCount gets to 12, you win! 
+      if (doctorCount === 12){
         this.setState({msg: "YOU WON!"});
-        this.setState({win: 0, clickedArray: []});
-        this.setState({score: +1});
+        this.setState({doctorCount: 0, 
+                      clickedArray: [],
+                      score: score});
       }
-    
-    
+
     else {
-           //make clickedArray equal to that in the state
+
+    //make clickedArray equal to that in the state
     let clickedArray = this.state.clickedArray;
     //push the id into the array
     clickedArray.push(id); 
 
     console.log(clickedArray);
+
     this.setState({
       msg: this.doctorMsg(),
-     // clickedArray: clickedDoctor,
-      win: win
+      doctorCount: doctorCount
     });
+
     this.shuffleDoctors();
     }
   }
@@ -81,13 +91,16 @@ class Doctors extends Component {
     return (
       <div>
         <h1>
-          Score : 
-          Losses : {this.state.lose}
+          Score : {this.state.score}
+          Losses : {this.state.loss}
+
           <br></br>
-         Doctor Count = {this.state.win}
+         Doctor Count = {this.state.doctorCount}
+
         </h1>
         <h2>{this.state.msg}</h2>
           <div className="wrapping">
+
           <Wrapper>
         {this.state.DoctorList.map(DoctorList => (
 
@@ -97,7 +110,6 @@ class Doctors extends Component {
                 id = {DoctorList.id}
                 handleClick = {this.handleClick} 
                 />
-
         ))}
         </Wrapper>
    </div>
