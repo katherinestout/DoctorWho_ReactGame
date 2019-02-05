@@ -6,9 +6,7 @@ Test your memory! There are twelve doctors. To start, click on one of the images
 Deployed Version: 
 
 
-
-
-
+https://young-dusk-20952.herokuapp.com/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
