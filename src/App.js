@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Doctors from './components/Doctors';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         you win. If you click on one twice, you lose!
       </p>
 <Doctors/>
+<Footer/>
       
       </div>
     );

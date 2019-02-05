@@ -99,15 +99,19 @@ class Doctors extends Component {
   
     return (
       <div>
-        <h2>
-          Score : {this.state.score}
-          <br></br>
-          Losses : {this.state.loss}
+      <div className="row">
+      <div className="col-sm-4"></div>
+      <div className="col-sm-2">WINS : {this.state.score}</div>
+      <div className="col-sm-2">LOSSES : {this.state.loss}</div>
+      <div className="col-sm-4"></div>
+ </div>
 
-          <br></br>
-         Doctor Count = {this.state.doctorCount}
-
-        </h2>
+      <div className="row">
+      <div className="col-sm-12">
+      DOCTOR COUNT = {this.state.doctorCount}
+      </div>
+      </div>
+  
         <br></br>
         <h2>{this.state.msg}</h2>
           <div className="wrapping">
@@ -124,6 +128,7 @@ class Doctors extends Component {
         ))}
         </Wrapper>
    </div>
+  
       </div>
     )
   }
