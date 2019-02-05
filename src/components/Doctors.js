@@ -9,22 +9,35 @@ import Wrapper from './Wrapper';
 class Doctors extends Component {
     state = {
         DoctorList
-    }
-
-    handleClick = (id) => {
-        //console.log(this.state);
-        //console.log(this.props);
-       // console.log(this);
-        console.log(id);
-       // console.log(this.props.object.name);
     };
+
+  //if clicked dr who, add the id to array
+  handleClick = (id) => {
+    //const clickedArray = [''];
+    //clickedArray.push(id);
+
+      console.log(id);
+      //console.log(clickedArray);
+
+      //addClick();
+  };
+
+    /*
+    addClick = () => {
+     
+      const clickedArray = [''];
+      clickedArray.push(id);
+  
+        console.log(id);
+        console.log(clickedArray);
+    };
+ 
+    */
     
 //console.log(this.state.DoctorList[1].name);
-
   render() {
 
- 
-
+  
     return (
       <div>
           <div className="wrapping">
