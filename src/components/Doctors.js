@@ -4,16 +4,14 @@ import DoctorCard from './DoctorCard.js';
 import './css/doctors.css';
 import Wrapper from './Wrapper';
 
-
-
 class Doctors extends Component {
     state = {
         DoctorList,
-      //  doctors,
+       // doctors,
         clickedArray: [],
         loss: 0,
         doctorCount: 0,
-        msg: "",
+        msg: "Ready? Click to start!",
         score: 0
     };
 
@@ -68,8 +66,19 @@ class Doctors extends Component {
   };
 
   shuffleDoctors = () => {
-
-  }
+    const doctorCopy = this.state.DoctorList;
+    let total = doctorCopy.length;
+    const shuffled = [];
+    while (total){
+      let index = Math.floor(Math.random() * doctorCopy.length);
+      if (index in doctorCopy){
+        shuffled.push(doctorCopy[index]);
+        delete doctorCopy[index];
+        total --;
+      }
+    }
+      this.setState({DoctorList: shuffled});
+  };
 
   doctorMsg = () => {
     const msgArray = [
@@ -90,14 +99,16 @@ class Doctors extends Component {
   
     return (
       <div>
-        <h1>
+        <h2>
           Score : {this.state.score}
+          <br></br>
           Losses : {this.state.loss}
 
           <br></br>
          Doctor Count = {this.state.doctorCount}
 
-        </h1>
+        </h2>
+        <br></br>
         <h2>{this.state.msg}</h2>
           <div className="wrapping">
 
